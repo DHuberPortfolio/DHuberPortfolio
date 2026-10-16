@@ -16,7 +16,7 @@ A zero-dependency Node.js CLI that grades any AI workflow's output against a lab
 
 - A compliance reviewer's own scorecard reported a **100% catch rate**. The harness measured **30%** of the documents it let through needing a person. One prompt change took that to **6.7%** in four runs out of four — five routes fixed, none broken.
 - It reproduces a news-metadata agent's scorecard figure for figure, then reports what three fresh runs are worth.
-- 170+ tests, run in CI on Linux and Windows across three Node versions, checked for teeth by breaking the code on purpose.
+- 200+ tests, run in CI on Linux and Windows across three Node versions, checked for teeth by breaking the code on purpose.
 
 Built with Claude Code. [Full write-up and results →](https://devinhuber.com/eval-harness/)
 
