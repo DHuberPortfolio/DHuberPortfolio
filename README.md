@@ -1,34 +1,32 @@
-### Devin Huber
+### Devin Huber · AI automation engineer
 
-I build AI systems, and measure how often they're wrong.
+I build AI automations that run on their own, and prove they work.
+Four of my agents run at my employer today, each one tested before anyone relied on it.
 
-I started building AI agents about a year ago in n8n and Zapier, for my job and as spec builds for companies I wanted to work for. The more of them I shipped, the more one question mattered: were they right? Their own scorecards weren't answering it honestly. One reported a 100% catch rate while 30% of what it let through still needed a person. So I built a tool that answers it, and I'm moving more of my work from workflow builders into tested code.
+**[devinhuber.com](https://devinhuber.com)** · [Résumé](https://devinhuber.com/resume/) · [LinkedIn](https://www.linkedin.com/in/devinhuber/) · Columbus, OH · open to AI automation & AI engineering roles
 
-Everything here is scored against answers written before it ran, and reported even when the result came back negative.
+<table>
+<tr>
+<td width="25%"><h2>4</h2>AI agents running at my employer</td>
+<td width="25%"><h2>~110 h</h2>a year back for the CEO, projected</td>
+<td width="25%"><h2>0 of 33</h2>trick questions fooled my archive AI</td>
+<td width="25%"><h2>3×</h2>fewer wrong tags after my fix</td>
+</tr>
+</table>
 
-**[devinhuber.com](https://devinhuber.com)** · [LinkedIn](https://www.linkedin.com/in/devinhuber/) · [Résumé](https://devinhuber.com/resume/)
+#### Free tools · try them in your browser
 
----
+| Tool | What it answers |
+|:--|:--|
+| [**Error-rate calculator**](https://dhuberportfolio.github.io/error-rate-calculator/) | How wrong is your AI, really? Audited against statsmodels on 65,808 inputs. |
+| [**Workflow cost calculator**](https://dhuberportfolio.github.io/workflow-cost-calculator/) | What your AI workflow really costs: the model, the reviewers and the misses. |
+| [**Ready-to-ship checklist**](https://dhuberportfolio.github.io/ready-to-ship/) | Twelve questions before an AI runs on its own. |
+| [**n8n export scrubber**](https://dhuberportfolio.github.io/n8n-export-scrubber/) | Share the workflow, not your keys. Nothing leaves your browser. |
 
-#### [workflow-eval-harness](https://github.com/DHuberPortfolio/workflow-eval-harness)
+#### Code
 
-A zero-dependency Node.js CLI that grades any AI workflow's output against a labeled answer key. The headline metric is the **silent error rate**: of everything the workflow let through with no human in front of it, the share that needed one. Every rate carries a 95% range, because "0 errors in 7" is still consistent with a true rate of 35%.
+- [**workflow-eval-harness**](https://github.com/DHuberPortfolio/workflow-eval-harness) grades any AI workflow against an answer key. Its headline metric is the silent error rate: what went out unchecked that needed a person. Node.js, zero dependencies, 200+ tests in CI on Linux and Windows across three Node versions.
+- [**AIBuildsSeptemberShowcase**](https://github.com/DHuberPortfolio/AIBuildsSeptemberShowcase) holds sanitized n8n agent workflows, a README each, and a replay that matches a recorded run on all 56 figures.
+- [**workout-ledger**](https://github.com/DHuberPortfolio/workout-ledger) is my own one-file fitness dashboard: a calorie-deficit calendar, automatic PRs and a model-vs-scale weight chart. [Try it](https://dhuberportfolio.github.io/workout-ledger/).
 
-- A compliance reviewer's own scorecard reported a **100% catch rate**. The harness measured **30%** of the documents it let through needing a person. One prompt change took that to **6.7%** in four runs out of four — five routes fixed, none broken.
-- It reproduces a news-metadata agent's scorecard figure for figure, then reports what three fresh runs are worth.
-- 200+ tests, run in CI on Linux and Windows across three Node versions, checked for teeth by breaking the code on purpose.
-
-Built with Claude Code. [Full write-up and results →](https://devinhuber.com/eval-harness/)
-
-#### [AIBuildsSeptemberShowcase](https://github.com/DHuberPortfolio/AIBuildsSeptemberShowcase)
-
-Sanitized n8n exports of six workflows — client names, credentials, webhook IDs and internal URLs removed — each with a README covering what it does, how it is wired, and what it does when it is wrong. Includes a replay of the metadata agent's deterministic layers that matches a recorded production run on all 56 figures.
-
-#### Now
-
-- Growing each answer key toward ~500 labeled items, so a single miss stops swinging the error rate.
-- Moving more workflows out of n8n and Zapier into code, with tests from the first commit.
-
----
-
-The write-ups, including [an analysis where none of fifteen hypotheses survived](https://devinhuber.com/projects/summary-quality/), are at **[devinhuber.com](https://devinhuber.com)**.
+Built with Claude, the Anthropic API, n8n, Zapier, Python, Node.js, MCP and GitHub Actions. My production work is private to my employer; [devinhuber.com](https://devinhuber.com) has a write-up of every build.
